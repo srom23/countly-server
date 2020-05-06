@@ -5,7 +5,9 @@
   "main": "countly.device.list.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "nodejs generate.js > countly.device.list.js"
+    "generate": "nodejs generate.js > countly.device.list.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "countly",
@@ -23,6 +25,8 @@
   },
   "homepage": "https://count.ly/",
   "dependencies": {
-    "csvtojson": "^1.1.9"
-  }
+    "csvtojson": "^1.1.9",
+    "snyk": "^1.319.0"
+  },
+  "snyk": true
 }
